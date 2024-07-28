@@ -36,7 +36,7 @@ input.invalid {
 button {
     border-radius: 3px;
     color: var(--text);
-    background-color: var(--secondary);
+    background-color: var(--background-dark);
     font-size: 15px;
     font-family: 'Cascadia Mono';
     border: none;
