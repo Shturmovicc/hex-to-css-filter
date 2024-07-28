@@ -1,0 +1,134 @@
+:root {
+    --background: #1e1e1e;
+    --background-dark: #171717;
+    --background-bright: #252526;
+    --text: #ffffff;
+    --secondary: #ff9313;
+}
+
+body {
+    background-color: var(--background);
+    font-family: 'Cascadia Mono';
+    font-size: 15px;
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    font-family: "Consolas", 'Courier New', Courier, "Ubuntu Mono", monospace;
+    color: var(--text);
+    border-radius: 1px;
+    font-size: 15px;
+    border: none;
+    background-color: #ffffff1e;
+    padding: 7px;
+}
+
+input:focus {
+    outline: 1px solid #009dff;
+}
+
+input.invalid {
+    outline: 1px solid red;
+}
+
+button {
+    border-radius: 3px;
+    color: var(--text);
+    background-color: var(--secondary);
+    font-size: 15px;
+    font-family: 'Cascadia Mono';
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+a {
+    color: var(--secondary);
+}
+
+.monofont {
+    font-family: "Consolas", 'Courier New', Courier, "Ubuntu Mono", monospace;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: clamp(50vw, 500px, 100vw);
+    height: 100vh;
+    margin: auto;
+}
+
+.wrapper > div {
+    width: clamp(80%, 80%, 90%);
+    background-color: var(--background-bright);
+    border: 1px solid #ffffff22;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.converter {
+    margin-top: 5%;
+}
+
+.converter__input {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #ffffff22;
+    padding: 3px;
+}
+
+.converter__input * {
+    margin: 2px;
+}
+
+.converter__result {
+    padding: 5px;
+}
+
+.result div {
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    margin: 5px 0px;
+}
+
+#compute {
+    width: 100%;
+    padding: 8px;
+}
+
+#realresult {
+    background-color: #3b0394;
+}
+
+#computedresult {
+    filter: invert(17%) sepia(54%) saturate(4254%) hue-rotate(257deg) brightness(76%) contrast(128%);
+}
+
+#result {
+    margin: 5px 0px;
+}
+
+#lossresult {
+    font-size: 1.1em;
+}
+
+#targetcolor {
+    width: 100%;
+}
+
+#clipboardcopy {
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.description {
+    margin-top: 1%;
+}

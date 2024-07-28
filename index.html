@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Hex Color to CSS Filter Converter</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/cascadia-mono@4.2.1/index.min.css">
+        <link rel="stylesheet" href="/styles.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="converter">
+                <div class="converter__input">
+                    <span>Target Color</span>
+                    <input type="text" id="targetcolor" value="#3b0394" autocomplete="off">
+                    <button id="compute">Compute Filter</button>
+                </div>
+                <div class="converter__result">
+                    <div class="result">
+                        <span>Real pixel, color applied through CSS <span class="monofont">background-color</span>:</span>
+                        <div id="realresult"></div>
+                    </div>
+                    <div class="result">
+                        <span>Filtered pixel, color applied through <span class="monofont">CSS filter</span>:</span>
+                        <div id="computedresult"></div>
+                    </div>
+
+                    <div class="monofont" id="result">filter: invert(17%) sepia(54%) saturate(4254%) hue-rotate(257deg) brightness(76%) contrast(128%);</div>
+                    <div id="lossresult">Loss: 0.1 This is a perfect result.</div>
+                    <button id="clipboardcopy">Copy filter to Clipboard</button>
+                </div>
+            </div>
+
+            <div class="description">
+                <div>For this code to work well the starting color needs to be black. If your icon isn't black you can prepend "<span class="monofont">brightness(0) saturate(100%)</span>" to your filter property which will first turn the icon to black.</div>
+                <hr>
+                <div>Credits: <a href="https://codepen.io/sosuke/pen/Pjoqqp" target="_blank">Barrett Sonntag</a></div>
+            </div>
+        </div>
+
+        <script src="/script.js"></script>
+    </body>
+</html>
+  
